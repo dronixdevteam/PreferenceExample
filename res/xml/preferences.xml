@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+        android:title="First Category"
+        android:key="first_category"
+        >
+        
+        <CheckBoxPreference 
+            android:key="perform_updates"
+            android:summary="Enable or disable menu dronix"
+            android:title="DronixAdvancedmenu" 
+            android:defaultValue="true"
+          
+        />
+        
+        <ListPreference 
+            android:key="Dronix2"
+            android:title="RemoveDataIcon"
+            android:summary="Define new settings"
+            android:defaultValue="1000" 
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:dependency="perform_updates"
+        />    
+            
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Second Category"
+        android:key="second_category">
+ 
+        <CheckBoxPreference 
+            android:key="perform_updates"
+            android:summary="Enable or disable menu dronix"
+            android:title="DronixAdvancedmenu" 
+            android:defaultValue="true"
+        
+        />
+        
+
+        <EditTextPreference
+            android:key="welcome_message"
+            android:title="Dem" 
+            android:summary="Dronix extended menu"
+            android:dialogTitle="Welcome Message"
+            android:dialogMessage="Provide a message"    
+            android:defaultValue="Default welcome message" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Third Category"
+        android:key="third_category">
+ <CheckBoxPreference 
+            android:key="facebook_fix"
+            android:summary="Enaable or disable facebook fix"
+            android:title="facebookFix" 
+            android:defaultValue="true"
+        />
+        
+        
+        
+        <EditTextPreference
+            android:key="welcome_message"
+            android:title="facebook fix" 
+            android:summary="Aplly fix on facebook"
+            android:dialogTitle="Welcome Message"
+            android:dialogMessage="Provide a message"    
+            android:defaultValue="Default welcome message" />
+
+    </PreferenceCategory>
+
+    
+</PreferenceScreen>
